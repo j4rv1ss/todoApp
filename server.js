@@ -19,3 +19,7 @@ connectDatabase()
 app.listen(process.env.PORT , ()=>{
     console.log("server running on port "+ process.env.PORT)
 })
+
+app.get((req,res)=>{
+  res.send("hello world")
+})
