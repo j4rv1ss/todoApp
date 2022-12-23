@@ -15,11 +15,11 @@ cloudinary.config({
 
 mongoose.set('strictQuery', true);
 connectDatabase()
+app.get("/",(req,res)=>{
+  res.send("<h1>hello world<h1/>")
+})
 
 app.listen(process.env.PORT , ()=>{
     console.log("server running on port "+ process.env.PORT)
 })
 
-app.get((req,res)=>{
-  res.send("hello world")
-})
